@@ -1,0 +1,136 @@
+@import './variables.scss';
+
+@mixin colorBtn($color) {
+  background: $color;
+
+  &:hover {
+    color: $color;
+
+    &:before,
+    &:after {
+      background: $color;
+    }
+  }
+}
+
+.blue-btn {
+  @include colorBtn($blue)
+}
+
+.light-blue-btn {
+  @include colorBtn($light-blue)
+}
+
+.light-flower-blue-btn {
+  @include colorBtn($light-flower-blue)
+}
+
+.red-btn {
+  @include colorBtn($red)
+}
+
+.pink-btn {
+  @include colorBtn($pink)
+}
+
+.green-btn {
+  @include colorBtn($green)
+}
+
+.tiffany-btn {
+  @include colorBtn($tiffany)
+}
+
+.yellow-btn {
+  @include colorBtn($yellow)
+}
+
+.guo-btn {
+  font-size: 14px;
+  color: #fff;
+  // padding: 14px 36px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: 600ms ease all;
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    background: #fff;
+
+    &:before,
+    &:after {
+      width: 100%;
+      transition: 600ms ease all;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    transition: 400ms ease all;
+  }
+
+  &::after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.custom-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  color: #fff;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.handle-button {
+  border: 1px solid #888;
+  background: -webkit-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+}
+
+.handle-button-blue {
+	border: 1px solid #1d567d;
+	background: -webkit-linear-gradient(top,#2a96d8 0%,#257db9 90%,#2e89c5 100%);
+  color: #FFFFFF;
+}
+
+.btn-text {
+  color: #1e5495;
+}
+
+.btn-text-red {
+  color: $red
+}
+
+.el-button--text:hover {
+  text-decoration: underline;
+}
+
+.text-btn {
+  font-weight: normal;
+  color: #1e5495;
+}
+
+.text-btn:hover {
+  text-decoration: underline;
+}
+
